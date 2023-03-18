@@ -46,7 +46,7 @@ jobs:
             . build/envsetup.sh && lunch twrp_berlna-eng && mka bootimage -j4
 
        - uses: actions/upload-artifact@v2
-         with:
+         with: https://gerrit.twrp.me/c/android_build/+/5445
           name: recoveryzip
           path: work/out/target/product/*/*.zip
 

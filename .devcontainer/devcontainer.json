@@ -1,0 +1,150 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/java:1": {
+			"installGradle": true,
+			"installMaven": true,
+			"installAnt": true,
+			"version": "latest",
+			"jdkDistro": "ms",
+			"gradleVersion": "latest",
+			"mavenVersion": "latest",
+			"antVersion": "latest"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"optimize": true,
+			"version": "latest"
+		},
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"upgradePackages": true,
+			"packages": ""
+		},
+		"ghcr.io/devcontainers-contrib/features/argo-cd:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/argo-workflows:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/bash-command:1": {
+			"command": "echo hi!"
+		},
+		"ghcr.io/devcontainers-contrib/features/concurnas-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "11",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/connor-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/copier:7": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/kotlin-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/kscript-sdkman:2": {
+			"version": "latest",
+			"kotlinVersion": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/maven-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/mvnd-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/npm-package:1": {
+			"package": "typescript",
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/perl-asdf:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/pipx-package:1": {
+			"package": "black",
+			"version": "latest",
+			"injections": "pylint pytest"
+		},
+		"ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {},
+		"ghcr.io/devcontainers-contrib/features/tmux-homebrew:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/toolkit-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/wget-apt-get:1": {},
+		"ghcr.io/guiyomh/features/golangci-lint:0": {
+			"version": "latest"
+		},
+		"ghcr.io/guiyomh/features/gomarkdoc:0": {
+			"version": "latest"
+		},
+		"ghcr.io/jungaretti/features/make:1": {},
+		"ghcr.io/edouard-lopez/devcontainer-features/bats:0": {
+			"version": "latest"
+		},
+		"ghcr.io/oleksis/devcontainer-features/python-launcher:1": {
+			"version": "latest"
+		},
+		"ghcr.io/ebaskoro/devcontainer-features/sdkman:1": {
+			"candidate": "maven",
+			"version": "latest"
+		},
+		"ghcr.io/eliises/devcontainer-features/bash-profile:1": {
+			"command": "alias k=kubectl",
+			"file": "$_CONTAINER_USER_HOME/.bashrc"
+		},
+		"ghcr.io/akhildevelops/devcontainer-features/android-cli:0": {},
+		"ghcr.io/akhildevelops/devcontainer-features/apt:0": {},
+		"ghcr.io/akhildevelops/devcontainer-features/pip:0": {},
+		"ghcr.io/jarrodcolburn/features/android-sdk:0": {
+			"emulator": true,
+			"platforms": "33",
+			"build-tools": "30.0.3"
+		},
+		"ghcr.io/jarrodcolburn/features/flutter-sdk:0": {
+			"release": "stable"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mgesbert.python-path"
+			]
+		}
+	}
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
